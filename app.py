@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
-import YouTubeMusicAPI
 import random
 import string
 import os
@@ -78,8 +77,3 @@ def get_song(code):
         return render_template('song.html', song_path=song_path, message=song_info['message'])
     else:
         return "Code not found", 404
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

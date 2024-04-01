@@ -1,0 +1,5 @@
+gunicorn
+flask
+pytube
+moviepy
+youtube_search
