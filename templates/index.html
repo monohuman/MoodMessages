@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Your Message with a Song</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="center">
+        <h1>MoodMessages</h1>
+        <h3>Create a message with a song playing in the background. When your friend (or enemy) opens the link, they can read your message while listening to a song of your choice.</h3>
+        <form method="post">
+            <input type="text" id="song" name="song" placeholder="Enter your song's name & author, or a youtube link" required><br>
+            <input type="text" id="message" name="message" placeholder="Enter your message" required><br> <!-- change back to textarea if it doesnt work -->
+            <input type="submit" id="submit" value="Generate Link">
+        </form>
+        
+        <div id="result">
+            {% if code %}
+                <h2>Your link is ready!</h2>
+                <a href="/{{ code }}">{{ code }}</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

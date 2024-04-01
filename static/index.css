@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Montserrat.ttf);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat';
+    background-color: #f2ece8;
+    color: black;
+    width: 100%;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#song, #message, #submit {
+    background-color: #f2ece8;
+    border: solid 7px black;
+    padding: 20px;
+    font-size: 30px;
+    width: 700px;
+}
+
+#song {
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: -3px;
+}
+
+#message {
+    border-radius: 0px;
+    margin-top: -3px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+#submit {
+    border-radius: 0px 0px 20px 20px;
+    margin-top: -6px;
+    width: 753px;
+}
+
+#message:focus, #song:focus, #submit:hover {
+    background-color: black;
+    color: #f2ece8;
+    transition: 0.2s;
+}
+
+#message:not(:focus), #song:not(:focus), #submit:not(:hover) {
+    background-color: #f2ece8;
+    color: black;
+    transition: 0.3s;
+}
+
+h3 {
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}

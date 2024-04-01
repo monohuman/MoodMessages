@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song and Message</title>
+    <script>
+        function showMessageAndPlayAudio() {
+            var message = document.getElementById("hiddenMessage");
+            var audio = document.getElementById("audioPlayer");
+            var button = document.getElementById("showMessageButton");
+
+            // Play audio
+            audio.play();
+
+            // Show message
+            if (message.style.display === "none") {
+                message.style.display = "block";
+                button.style.display = "none";
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='song.css') }}">
+</head>
+<body>
+    <div class="center">
+        <audio id="audioPlayer" controls>
+            <source src="{{ song_path }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div id="hiddenMessage" style="display:none;">
+            <h2>{{ message }}</h2>
+        </div>
+
+        <button onclick="showMessageAndPlayAudio()" id="showMessageButton">Show message</button>
+    </div>
+</body>
+</html>
